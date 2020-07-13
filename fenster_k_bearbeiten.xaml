@@ -1,0 +1,29 @@
+﻿<Window x:Class="ProjektNeu.fenster_k_bearbeiten"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektNeu"
+        mc:Ignorable="d"
+        Title="Kunden Bearbeiten" Height="450" Width="800" HorizontalAlignment="Center"  >
+    <Window.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MinWidth" Value="20"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="450"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+
+    </Window.Resources>
+    <Grid Background="#FFA4BCD1" HorizontalAlignment="Center">
+        <Button x:Name="BT_aendern" Content="Kunden Data ändern" Margin="479,121,27,253.667"  Click="BT_aendern_Click" />
+        <Button x:Name="BT_löschen" Content="Kunden Data löschen" Margin="479,185,27,184.667"  Click="BT_löschen_Click" />
+        <Button x:Name="BT_brief_erst" Content="Briefe erstellen" Margin="479,256,27,114.667" Click="BT_brief_erst_Click" />
+        <DataGrid Name="DG_kunde" IsReadOnly="True"  HorizontalAlignment="Left" Height="361" Margin="26,30,0,0" VerticalAlignment="Top" Width="428"  />
+    </Grid>
+</Window>

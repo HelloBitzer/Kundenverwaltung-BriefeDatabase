@@ -1,0 +1,35 @@
+﻿<Window x:Class="ProjektNeu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektNeu"
+        mc:Ignorable="d"
+        Title="Kundenverwaltung" Height="450" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MinWidth" Value="20"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#FFA4BCD1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-1,1,2,1" Width="791">
+        <Button Name="btn_exit" Content="Exit" Margin="582,322,59,45" Click="btn_exit_Click"  />
+        <Button Name="btn_connect" Content="Check Database" HorizontalAlignment="Left" Margin="43,10,0,0" VerticalAlignment="Top" Click="btn_connect_Click" />
+        <DataGrid Name="DG_Allekunden" HorizontalAlignment="Left" Height="216" Margin="46,84,0,0" VerticalAlignment="Top" Width="686" SelectionChanged="DG_Allekunden_SelectionChanged"/>
+        <Button Name="btn_insert" Content="Alle Kunden anzeigen" HorizontalAlignment="Left" Margin="212,10,0,0" VerticalAlignment="Top" Click="btn_insert_Click" Width="174"/>
+        <Button Name="Bt_kd_anlegen" Content="Kunden anlegen" HorizontalAlignment="Left" Margin="408,10,0,0" VerticalAlignment="Top" Width="150" Click="Bt_kd_anlegen_Click"/>
+        <!--<Button Name="Bt_kd_bearbeiten" Content="Kunden bearbeiten" HorizontalAlignment="Left" Margin="403,10,0,0" VerticalAlignment="Top" Width="150" Click="Bt_kd_bearbeiten_Click"/>-->
+        <Button Name="delete" Content="Kunde löschen" HorizontalAlignment="Left" Margin="46,322,0,0" VerticalAlignment="Top" Click="delete_Click"/>
+        <Button x:Name="BT_brief_erst" Content="Briefe erstellen" Margin="408,322,233,45"  Width="150" Click="BT_brief_erst_Click"/>
+        <Button Name="bt_ändern" Content="Kundendaten Update" HorizontalAlignment="Left" Margin="582,10,0,0" VerticalAlignment="Top" Click="bt_ändern_Click"/>
+        <CheckBox Name="cb_sqlusing" Content="Use Sql" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+    </Grid>
+</Window>
